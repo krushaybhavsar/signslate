@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+### This project was created for High Tech Hacks 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
 
-## Available Scripts
+American Sign Language (ASL) is a visual-gestural language created by those with speaking and hearing disabilities. The language has approximately 500,000 speakers around the world! Despite being able to communicate, ASL speakers struggle to feel included in society due to their differences. Not many people may understand how to communicate in the language. Due to this injustice, we were inspired to create a web application that not only educates the population on how to speak American Sign Language but also helps society become more inclusive. Rarely anyone who does not have a close friend or family member that has hearing/speaking disabilities knows or understands the language.
 
-In the project directory, you can run:
+## What it does
 
-### `yarn start`
+Signslate is an application that allows users to speak and translate speech to ASL or allow users to sign in ASL through their webcam and translate it to speech. Through this application, non-ASL speakers can learn how to communicate in ASL while checking their ASL through the webcam component of the app. Moreover, with further development and improvement, this app can be used to close the communicational divide between blind and deaf people as well as non-ASL and ASL speakers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How we built it
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To build this application, we used ReactJS and Python. Our frontend was built using ReactJS while the backend was hosted on a Flask server in Python. To translate speech to text, our application would send speech through an HTTP request to the Flask server which would perform web scraping to gather links to ASL videos corresponding to the words input. These links were sent back to React which then rendered the videos and played them one after each other. To translate the video from the webcam (in ASL) to speech, our application would send images through an HTTP request to the Flask server which would then combine the sequences of images to create a video. This video was then fed into a pre-trained video processing model to predict a word for the video. This predicted word was then sent back to React which translated text to audio.
 
-### `yarn test`
+## Challenges we ran into
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Over the course of the hackathon, we ran into several issues, some much larger than others. The most time-consuming issue we had was in the English-to-ASL translator aspect of our project. We wanted to find a way to send the data the user inputs into a text area to a backend Flask server written in python. The text can then be processed and used for web-scraping. The challenging part about this is retrieving the processed data from the backend server into the ReactJS frontend in a way that would update the frontend in real-time as well. This challenge took us around 4 and a half hours to overcome. After tedious tweaking and code changes, we settled on a much simpler way to tackle the problem. Instead of updating the data on the frontend in real-time, we created a new URL route to display the videos. Every time the user would click the submit button, the page would redirect to another URL route. This forces the frontend to retrieve the updated data. Another challenge we ran into was finding accessible data for American Sign Language. Most translators or datasets only provide sign langue for singular letters. Sign language is not a compilation of singular letters and to make our project more practical, we aimed to only translate whole words or phrases. Eventually, we came across a useful ASL Dictionary site from which we decided to web-scrape videos. Challenges like these forced us to think in ways we never would have if it weren't for the hackathon. 
 
-### `yarn build`
+## Accomplishments that we're proud of
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We are proud that we were able to learn how to web-scrape, as it was a great learning experience and interesting (fun too!). Although it was difficult at first to scrape through various websites, it was extremely satisfying to see it work smoothly. It was also amazing to be able to send an active video stream to our server. We're also proud that we were able to incorporate machine learning into our project by using video classification to translate a video into a word. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What we learned
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We learned various topics related to web development and machine learning through this project. The project allowed us to learn complex topics in ReactJS and Python, as we had to connect a ReactJS frontend to a python backend Flask server. We also learned how to integrate machine learning models for practical applications and how to use speech recognition and text-to-speech to enhance our React applications. 
 
-### `yarn eject`
+## What's next for Signslate
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In the future, a few things we hope to improve for Signslate are its video classification accuracy and an extra feature to host video calls on Signslate which utilize both Speech-to-ASL and ASL-to-Speech components to enable communication between the blind and the deaf in addition to between non-ASL and ASL speakers.
