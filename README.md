@@ -1,5 +1,14 @@
 ### This project was created for High Tech Hacks 2021
 
+## Screenshots
+
+![ss1](https://user-images.githubusercontent.com/68528325/122667266-f1a36080-d17f-11eb-8e42-728e516c3e23.png)
+![ss2](https://user-images.githubusercontent.com/68528325/122667269-f36d2400-d17f-11eb-8bc7-2e4b36ab5c95.png)
+![ss3](https://user-images.githubusercontent.com/68528325/122667270-f536e780-d17f-11eb-9af0-af1b798c48a4.png)
+![ss5](https://user-images.githubusercontent.com/68528325/122667272-f9630500-d17f-11eb-934c-9b6d38330a94.png)
+![ss4](https://user-images.githubusercontent.com/68528325/122667275-fa943200-d17f-11eb-968a-52e24163167b.png)
+
+
 ## Inspiration
 
 American Sign Language (ASL) is a visual-gestural language created by those with speaking and hearing disabilities. The language has approximately 500,000 speakers around the world! Despite being able to communicate, ASL speakers struggle to feel included in society due to their differences. Not many people may understand how to communicate in the language. Due to this injustice, we were inspired to create a web application that not only educates the population on how to speak American Sign Language but also helps society become more inclusive. Rarely anyone who does not have a close friend or family member that has hearing/speaking disabilities knows or understands the language.
