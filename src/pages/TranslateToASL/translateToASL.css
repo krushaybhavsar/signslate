@@ -1,0 +1,163 @@
+.TranslateToASL {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.innerContents {
+  display: block;
+  text-align: center;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.welcome-false {
+  margin-bottom: 1vh;
+  font-weight: 400;
+}
+
+.welcome-true {
+  display: none;
+}
+
+.titleText {
+  margin-bottom: 5vh;
+  font-weight: 600;
+}
+
+.inputDiv-false {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.englishTextArea {
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-radius: 30px;
+  border-width: 2px;
+  padding: 15px;
+  margin-bottom: 5vh;
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+  resize: none;
+  height: 20vh;
+  width: 40vw;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  background: white;
+}
+.englishTextArea:focus {
+  outline: none !important;
+  box-shadow: 0 1px 5px 0 rgba(51, 122, 114, 0.15),
+    0 3px 10px 0 rgba(51, 122, 114, 0.1);
+}
+.englishTextArea:hover {
+  outline: none !important;
+  box-shadow: 0 1px 5px 0 rgba(51, 122, 114, 0.15),
+    0 3px 10px 0 rgba(51, 122, 114, 0.1);
+}
+
+.submitButton {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  display: block;
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    rgba(43, 77, 89, 1) 0%,
+    rgba(57, 153, 142, 1) 100%
+  );
+  z-index: 1;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.submitButton:before {
+  position: absolute;
+  border-radius: 10px;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(57, 153, 142, 1) 0%,
+    rgba(43, 77, 89, 1) 100%
+  );
+  z-index: -1;
+  transition: opacity 0.7s linear;
+  opacity: 0;
+}
+
+.submitButton:hover::before {
+  opacity: 1;
+}
+
+.translateVideoPlayer-false {
+  display: none;
+}
+
+.translateVideoPlayer-true {
+  display: flex;
+}
+
+.inputDiv-true {
+  display: none;
+}
+
+.microphoneDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.startStopBtn {
+  cursor: pointer;
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  margin-right: 5px;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    rgba(43, 77, 89, 1) 0%,
+    rgba(57, 153, 142, 1) 100%
+  );
+  z-index: 1;
+}
+
+.resetBtn {
+  cursor: pointer;
+
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  margin: 0;
+  position: relative;
+  background: rgb(211, 45, 45);
+  z-index: 1;
+}

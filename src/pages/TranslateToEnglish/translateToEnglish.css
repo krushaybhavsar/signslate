@@ -1,0 +1,160 @@
+.translatetoEngContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: flex-end;
+}
+
+.innerContents {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cameraDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.webcam {
+  height: 350px;
+  width: 622.775px;
+  margin: 5vh 20px;
+}
+
+.clickRecorder-true {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  display: block;
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    rgba(43, 77, 89, 1) 0%,
+    rgba(57, 153, 142, 1) 100%
+  );
+  z-index: 1;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.clickRecorder-true:before {
+  position: absolute;
+  border-radius: 10px;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(57, 153, 142, 1) 0%,
+    rgba(43, 77, 89, 1) 100%
+  );
+  z-index: -1;
+  transition: opacity 0.7s linear;
+  opacity: 0;
+}
+
+.clickRecorder-true:hover::before {
+  opacity: 1;
+}
+
+.clickRecorder-false {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  display: block;
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    rgba(252, 87, 94, 1) 0%,
+    rgba(247, 180, 44, 1) 100%
+  );
+  z-index: 1;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.clickRecorder-false:before {
+  position: absolute;
+  border-radius: 10px;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(247, 180, 44, 1) 0%,
+    rgba(252, 87, 94, 1) 100%
+  );
+  z-index: -1;
+  transition: opacity 0.7s linear;
+  opacity: 0;
+}
+
+.clickRecorder-false:hover::before {
+  opacity: 1;
+}
+
+.welcomeEng {
+  margin-bottom: 1vh;
+  font-weight: 400;
+}
+
+.asl-eng-text {
+  font-weight: 600;
+}
+
+.cameraTranslationDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.translationTextArea-true {
+  height: 320px;
+  width: 20vw;
+  font-size: 40px;
+  padding: 15px 20px;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-radius: 30px;
+  border-width: 2px;
+  resize: none;
+  text-align: center;
+  background: white;
+  box-shadow: 0 1px 5px 0 rgba(51, 122, 114, 0.15),
+    0 3px 10px 0 rgba(51, 122, 114, 0.1);
+  margin: 10px;
+}
+
+.translationTextArea-false {
+  height: 320px;
+  width: 20vw;
+  font-size: 18px;
+  padding: 15px 20px;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-radius: 30px;
+  border-width: 2px;
+  resize: none;
+  text-align: center;
+  background: white;
+  box-shadow: 0 1px 5px 0 rgba(51, 122, 114, 0.15),
+    0 3px 10px 0 rgba(51, 122, 114, 0.1);
+  margin: 10px;
+}

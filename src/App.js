@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
-function App() {
+import "./App.css";
+import "./globalVars";
+
+import MainPage from "./pages/Main/Main";
+import TranslateToASL from "./pages/TranslateToASL/TranslateToASL";
+import TranslateToEnglish from "./pages/TranslateToEnglish/TranslateToEnglish";
+import VideoPlayer from "./pages/videoplayer/VideoPlayer";
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route exact path={global.translateToASL} component={TranslateToASL} />
+        <Route
+          exact
+          path={global.translateToEnglish}
+          component={TranslateToEnglish}
+        />
+        <Route exact path={global.showtranslateToASL} component={VideoPlayer} />
+        <Redirect to={global.home} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,54 @@
+.Navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0%;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(43, 77, 89, 1) 0%,
+    rgba(57, 153, 142, 1) 100%
+  );
+}
+
+li a {
+  display: inline;
+  margin: 0 2vw;
+  height: 100%;
+  line-height: 10vh;
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoText {
+  color: white;
+  margin: 1vh 0;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.logoImg {
+  width: 50px;
+  height: 50px;
+  margin-left: 2vw;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  margin-right: 2vh;
+}
