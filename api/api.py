@@ -62,10 +62,6 @@ def findVideos():
     global words, links
     request_data = json.loads(request.data)
     cleaned_words = list(map(cleanText, request_data['content'].lower().split()))
-    # return {
-    #     'link': compile_videos(cleaned_words),
-    #     'words': cleaned_words
-    # }
 
     links = compile_videos(cleaned_words)
     words = list(request_data['content'].split())
@@ -79,7 +75,6 @@ def findVideos():
 def getImageData():
     global imgArray
     request_data = json.loads(request.data)
-    # print(request_data['image_data'])
     if (request_data['save'] == "True"):
         image_data = re.sub('^data:image/.+;base64,', '', request_data['image_data'])
         imgdata = base64.b64decode(image_data)
