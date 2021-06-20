@@ -28,9 +28,7 @@ def evaluate(imgs):
     #                                              shuffle=False,
     #                                              pin_memory=False)
     i3d = InceptionI3d(2000, in_channels=3)
-    # weights = 'archived/asl2000/FINAL_nslt_2000_iters=5104_top1=32.48_top5=57.31_top10=66.31.pt'
-    i3d.load_state_dict(torch.load('./FINAL_nslt_2000_iters=5104_top1=32.48_top5=57.31_top10=66.31.pt'))
-    # i3d.load_state_dict(torch.load('./FINAL_nslt_100_iters=896_top1=65.89_top5=84.11_top10=89.92.pt'))
+    i3d.load_state_dict(torch.load('./model2000.pt'))    
 
     i3d.cuda()
     i3d.eval()
