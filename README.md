@@ -2,20 +2,19 @@
 <p>🥇 Project received <b>1st place</b> overall in the Simplihacks 2021 Hackathon</p>
 <p>🏆 Project received the <b>Wolfram Alpha Award</b></p>
 
-Project created by Krushay Bhavsar and Ayush Agarwal
+Created by Krushay Bhavsar and Ayush Agarwal
 
 ## Demo and Explanatory Video
 
-Soon to be updated
+[![Demo and Explanatory Video](https://img.youtube.com/vi/3E6PrQ1_dkQ/0.jpg)](https://www.youtube.com/watch?v=3E6PrQ1_dkQ)
 
 ## Screenshots
 
 ![ss1](https://user-images.githubusercontent.com/68528325/122667266-f1a36080-d17f-11eb-8e42-728e516c3e23.png)
 ![ss2](https://user-images.githubusercontent.com/68528325/122667269-f36d2400-d17f-11eb-8bc7-2e4b36ab5c95.png)
+![ss4](https://user-images.githubusercontent.com/68528325/122667275-fa943200-d17f-11eb-968a-52e24163167b.png)
 ![ss3](https://user-images.githubusercontent.com/68528325/122667270-f536e780-d17f-11eb-9af0-af1b798c48a4.png)
 ![ss5](https://user-images.githubusercontent.com/68528325/122667272-f9630500-d17f-11eb-934c-9b6d38330a94.png)
-![ss4](https://user-images.githubusercontent.com/68528325/122667275-fa943200-d17f-11eb-968a-52e24163167b.png)
-
 
 ## Inspiration
 
