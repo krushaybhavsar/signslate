@@ -11,8 +11,9 @@ import re
 from eval import evaluate
 from locateWord import find_word
 import random
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 CORS(app)
 
 links = ""
@@ -40,6 +41,13 @@ def compile_videos(words):
         all_videos.append(scrape_videos('https://www.signasl.org/sign/' + str(word)))
     return all_videos
 
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')
 
 @app.route('/api/getText', methods=['GET'])
 def api():
@@ -62,10 +70,8 @@ def findVideos():
     global words, links
     request_data = json.loads(request.data)
     cleaned_words = list(map(cleanText, request_data['content'].lower().split()))
-
     links = compile_videos(cleaned_words)
     words = list(request_data['content'].split())
-
     return {
         'message': links,
         'words': words
@@ -85,33 +91,12 @@ def getImageData():
             'word': ""
         }
     else:
-        # Run prediction script
-        # imgArray = np.asarray(imgArray, dtype=np.uint8)
-        # print(imgArray[-1])
-        # print(np.append(imgArray, np.repeat(np.expand_dims(imgArray[-1], 0), (64 - len(imgArray)), axis=0), axis=0).shape)
-        # imgArray = np.append(imgArray, np.repeat(np.expand_dims(imgArray[-1], 0), (64 - len(imgArray)), axis=0), axis=0)
-        # print(imgArray.shape)
-        # indices = np.sort(np.asarray(random.sample(range(0, len(imgArray)), 64), dtype=np.int32))
-        # print(indices)
-        # imgArray = imgArray[indices]
-        # print(np.asarray(imgArray, dtype=np.float32).shape)
-        # print(len(imgArray))
-        
-        # for count in range(len(imgArray)):
-            # print(np.asarray(imgArray, dtype=np.uint8)[count])
-            # cv2.imwrite("./imgs/image{}.jpg".format(count), imgArray[count]/255.0)
-            # img = Image.fromarray(imgArray[count], 'RGB')
-            # img.show()
-            # break
-            # cv2.imshow("image", imgArray[count])
-            # cv2.waitKey()
-            # im.save("./imgs/image{}.jpeg".format(count))
-
         prediction = evaluate(imgArray)
         word = find_word(prediction)
         imgArray = []
-
         return {
             'word': word
         }
     
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
