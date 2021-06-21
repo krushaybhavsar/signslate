@@ -4,13 +4,11 @@ from bs4 import BeautifulSoup
 import requests
 import base64
 from PIL import Image
-import cv2
 import numpy as np
 import io
 import re
 from eval import evaluate
 from locateWord import find_word
-import random
 import os
 
 app = Flask(__name__, static_folder='../build', static_url_path='/')
