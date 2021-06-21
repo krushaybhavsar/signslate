@@ -1,4 +1,12 @@
-### This project was created for High Tech Hacks 2021
+<p>🥇 Project received <b>1st place</b> in the Diversity and Inclusion Category of the High Tech Hacks 2021 Hackathon</p>
+<p>🥇 Project received <b>1st place</b> overall in the Simplihacks 2021 Hackathon</p>
+<p>🏆 Project received the <b>Wolfram Alpha Award</b></p>
+
+Project created by Krushay Bhavsar and Ayush Agarwal
+
+## Demo and Explanatory Video
+
+Soon to be updated
 
 ## Screenshots
 
