@@ -42,7 +42,7 @@ const MainPage = () => {
             <p className="sectionBody">
               Signslate is extremely easy-to-use! To use the English to ASL
               Translator, simply click the appropriate link in the navigation
-              bar to be redireted to the translator. Entering the English text
+              bar to be redirected to the translator. Entering the English text
               be can done by either entering manually or using your microphone
               to voice type. Be sure to stop recording before you hit the
               translate button. After learning a handful of words on the English
