@@ -11,7 +11,7 @@ from eval import evaluate
 from locateWord import find_word
 import os
 
-app = Flask(__name__, static_folder='../build', static_url_path='/')
+app = Flask(__name__)
 CORS(app)
 
 links = ""
@@ -38,14 +38,6 @@ def compile_videos(words):
     for word in words:
         all_videos.append(scrape_videos('https://www.signasl.org/sign/' + str(word)))
     return all_videos
-
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
-
-@app.errorhandler(404)
-def not_found(e):
-    return app.send_static_file('index.html')
 
 @app.route('/api/getText', methods=['GET'])
 def api():
@@ -95,6 +87,3 @@ def getImageData():
         return {
             'word': word
         }
-    
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))

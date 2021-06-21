@@ -51,9 +51,6 @@ const MainPage = () => {
             </p>
           </div>
         </div>
-        <p style={{ margin: 0 }}>
-          This project was created for High Tech Hacks 2021
-        </p>
       </div>
     </div>
   );
